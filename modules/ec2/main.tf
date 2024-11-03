@@ -1,5 +1,4 @@
-variable "subnet_id"{}
-variable "security_groups"{}
+
 resource "aws_instance" "web_instance" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
@@ -7,9 +6,10 @@ resource "aws_instance" "web_instance" {
   subnet_id              = var.subnet_id
   security_groups        = var.security_groups
   associate_public_ip_address = true
-
-#   user_data = file(var.user_data_file)
-
+   # Load the user data from the external file and pass the web_server variable
+  user_data = templatefile("${path.module}/user_data.sh", {
+    web_server = var.web_server
+  })
   tags = {
     Name = "create by terra akku"
   }

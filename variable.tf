@@ -14,7 +14,7 @@ variable "instance_type" {
 variable "instance_keypair" {
   description = "AWS EC2 Key Pair that need to be associated with EC2 Instance"
   type        = string
-  default     = "advskill-key"
+  default     = "akku_key"
 }
 variable "aws_region" {
     description = "aws region"
@@ -22,3 +22,11 @@ variable "aws_region" {
     default = "us-east-1"
   
 }
+variable "web_server"{
+  description = "webserver apache or nginx"
+  type = string
+  default = "apache2"
+}
+variable "ami_id"{}
+variable "key_name"{}
+

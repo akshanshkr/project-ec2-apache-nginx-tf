@@ -8,4 +8,5 @@ main_vpc_class_b   = "10.1"
 ami_id = "ami-0866a3c8686eaeeba"
 instance_type = "t2.micro"
 key_name = "master_home"
+web_server = "nginx"
 
