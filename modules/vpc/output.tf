@@ -21,10 +21,4 @@ output "sg_bastion_name" {
   value = aws_security_group.sg_bastion.name
 }
 
-output "sg_ec2" {
-  value = aws_security_group.sg_ec2.id
-}
 
-output "sg_ec2_name" {
-  value = aws_security_group.sg_ec2.name
-}
