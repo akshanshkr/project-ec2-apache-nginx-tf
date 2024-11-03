@@ -1,4 +1,3 @@
-################# Subnets #############
 resource "aws_subnet" "subnet_pub_1" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "${var.main_vpc_class_b}.1.0/24"
