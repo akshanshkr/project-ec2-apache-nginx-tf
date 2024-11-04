@@ -27,6 +27,17 @@ variable "web_server"{
   type = string
   default = "apache2"
 }
+
 variable "ami_id"{}
 variable "key_name"{}
+
+variable "domain_name" {
+  description = "The domain name for the Route 53 record"
+  type        = string
+}
+
+variable "hosted_zone_id" {
+  description = "The hosted zone ID in Route 53 where the record will be created"
+  type        = string
+}
 

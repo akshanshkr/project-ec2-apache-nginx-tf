@@ -10,3 +10,7 @@ instance_type = "t2.micro"
 key_name = "master_home"
 web_server = "nginx"
 
+//hosted zone 
+hosted_zone_id = "Z08285513A8483GS6K2AM"
+domain_name = "example.aancconst.shop"
+

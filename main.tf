@@ -15,3 +15,10 @@ module "ec2" {
   web_server = var.web_server  # Set to "nginx" to install Nginx instead
   
 }
+module "hostedzone" {
+source = "./modules/hostedzone"
+hosted_zone_id = var.hosted_zone_id
+domain_name  = var.domain_name
+# Pass the EC2 instance's public IP to the hostedzone module
+ec2_public_ip = module.ec2.public_ip
+}
